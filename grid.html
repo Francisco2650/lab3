@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "nav main"
+                "footer footer";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+            height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: yellow;
+            padding: 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        main {
+            grid-area: main;
+            background-size: cover;
+            padding: 20px;
+            color: black;
+            text-align: center;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: salmon;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .links {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Cabeçario</h1>
+    </header>
+    <nav>
+        <a href="layout2.html">Layout 2</a>
+        <a href="layout3.html">Layout 3</a>
+        <a href="layout4.html">Layout 4</a>
+        <a href="layout5.html">Layout 5</a>
+        <a href="layout6.html">Layout 6</a> 
+    </nav>
+    <main>
+        <h2>Main</h2>
+        <p>Este é um exemplo de layout com CSS Grid</p>
+    </main>
+    <footer>
+        <p>Rodape</p>
+    </footer>
+</div>
+
+<div class="links">
+    <a href="layout1.html">1</a>
+    <a href="layout2.html">2</a>
+    <a href="layout3.html">3</a>
+    <a href="layout4.html">4</a>
+    <a href="layout5.html">5</a>
+    <a href="layout6.html">6</a>
+</div>
+
+</body>
+</html>
